@@ -115,6 +115,7 @@ section{
 }
 
 #girassol > p{  /* Controla o quadradado que está as palavras*/
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.515);
     padding: 10px 50px 10px 50px;
     background-color: rgba(231, 231, 231, 0.233);
     max-width: 500px;
@@ -126,7 +127,7 @@ section{
 
 .imagem{
     border-radius: 10px;
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.315);
+   
     
     background-image: url("imagens/background002.jpg");
     background-attachment: fixed;
@@ -140,6 +141,7 @@ section{
 }
 
 .imagem > p{ /* Controla o quadradado que está as palavras*/
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.515);
     padding: 10px 50px 10px 50px;
     background-color: rgba(0, 0, 0, 0.233);
     max-width: 500px;
