@@ -1,421 +1,100 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabela 002</title>
+    <meta name="author" content="Gleisson Souza">
+    <meta name="description" content="Trabalhando com tabelas">
+
+    <title>
+        Tabela 002
+    </title>
 
     <style>
         body{
             font-family: Arial, Helvetica, sans-serif;
-
         }
+
 
         table{
-            max-width: 800px;
-            margin: auto;
+            width: 500px;
             border-collapse: collapse;
-            
 
         }
 
-        td, th{
-            border: 1px solid black;
-            padding: 10px;
-            
-
-        }
-
-        thead{
+        thead, tfoot{
             background-color: gray;
             color: white;
 
         }
-
-        th{
-            background-color: rgba(255, 255, 0, 0.9);
-            color: black;
-
-        }
-
-        .num{
-            background-color: blanchedalmond;;
-            color: black;
-
-        }
-
-        .num, .ano_2024, .ano_2022, .porc, .abs, .total_porc{
-            text-align: center;
-
-        }
-
-        #distrito_federal{
-            background-color: blanchedalmond;
+        th, td{
+            border: 1px solid black;
+            padding: 10px;
             
         }
 
-        tfoot{
-            background-color: blanchedalmond;
+        .numero{
+            text-align: right;
 
         }
-        
-
     </style>
 </head>
 <body>
-   <h1>Uso de tabelas grandes</h1>
+    <h1>Uso de tabelas grandes</h1>
+    <!--
+        Anatomia para tabelas grandes
+        TABLE
+            THEAD
+                TR, TD, TH       
+            
+            TBODY
+                TR, TD, TH
 
-   <!--Anatomia para tabelas grandes
-   table 
-      thead
-        tr, td, th
-    
-      tbody
-        tr, td, th
+            TFOOT
+                TR, TD, TH
 
-      tfoot
-        tr, td, th
+    -->
 
 
-   -->
+    <table>
 
-   <table>
+        <thead>
+            <th>Estado</th>
+            <th>População</th>
 
-    <thead> <!-- Cabeçalho -->
-        <tr>
-            <th rowspan="2"></th>
-            <th rowspan="2">Estado</th>
-            <th class="col" colspan="2">População</th>
-            <th class="col" colspan="2">Variação (2010 - 2022)</th>
-            <th rowspan="2">% do total (2024)</th>
-  
-        </tr>
 
-        <tr>
-            <th>2024</th>
-            <th>2022</th>
-            <th>%</th>
-            <th>Abs.</th>
+        </thead>
 
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="numero">45 919 049</td>
 
+            </tr>
 
-        </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="numero">21 168 791</td>
 
-    </thead>
+            </tr>
 
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="numero">17 264 943</td>
+            </tr>
 
-    <tbody> <!-- Corpo -->
-        <tr id="sao_paulo">
-            <td class="num">1</td>
-            <td class="estado">São Paulo</td>
-            <td class="ano_2024">45.919.049</td>
-            <td class="ano_2022">44 411 238</td>
-            <td class="porc">7,63%</td>
-            <td class="abs">3 149 039</td>
-            <td class="total_porc">21,63%</td>
-
-        </tr>
-
-        <tr id="minas_gerais">
-            <td class="num">2</td>
-            <td class="estado">Minas Gerais</td>
-            <td class="ano_2024">21 322 691</td>
-            <td class="ano_2022">20 539 989</td>
-            <td class="porc">4,81%</td>
-            <td class="abs">942 659</td>
-            <td class="total_porc">10,03%</td>
-
-        </tr>
-
-        <tr id="rio_de_janeiro">
-            <td class="num">3</td>
-            <td class="estado">Rio de Janeiro</td>
-            <td class="ano_2024">17 219 679</td>
-            <td class="ano_2022">16 055 174</td>
-            <td class="porc">0,41%</td>
-            <td class="abs">65 245</td>
-            <td class="total_porc">8,10%</td>
-
-        </tr>
-
-        <tr id="bahia">
-            <td class="num">4</td>
-            <td class="estado">Bahia</td>
-            <td class="ano_2024">14 850 513</td>
-            <td class="ano_2022">14 141 626	</td>
-            <td class="porc">0,89%</td>
-            <td class="abs">124 720</td>
-            <td class="total_porc">6,99%</td>
-
-        </tr>
-
-        <tr id="parana">
-            <td class="num">5</td>
-            <td class="estado">Paraná</td>
-            <td class="ano_2024">11 824 665</td>
-            <td class="ano_2022">11 444 380</td>
-            <td class="porc">9,57%</td>
-            <td class="abs">999 854</td>
-            <td class="total_porc">5,56%</td>
-
-        </tr>
-
-        <tr id="rio_grande_do_sul">
-            <td class="num">6</td>
-            <td class="estado">Rio Grande do Sul</td>
-            <td class="ano_2024">11 229 915</td>
-            <td class="ano_2022">10 882 965</td>
-            <td class="porc">1,77%</td>
-            <td class="abs">189 036</td>
-            <td class="total_porc">5,28%</td>
-
-        </tr>
-
-        <tr id="pernambuco">
-            <td class="num">7</td>
-            <td class="estado">Pernambuco</td>
-            <td class="ano_2024">9 539 029</td>
-            <td class="ano_2022">9 058 931</td>
-            <td class="porc">2,98%</td>
-            <td class="abs">262 483</td>
-            <td class="total_porc">4,49%</td>
-
-        </tr>
-
-        <tr id="ceara">
-            <td class="num">8</td>
-            <td class="estado">Ceará</td>
-            <td class="ano_2024">9 233 656</td>
-            <td class="ano_2022">8 794 957</td>
-            <td class="porc">4,05%</td>
-            <td class="abs">342 576</td>
-            <td class="total_porc">4,34%</td>
-
-        </tr>
-
-        <tr id="para">
-            <td class="num">9</td>
-            <td class="estado">Pará</td>
-            <td class="ano_2024">8 664 306</td>
-            <td class="ano_2022">8 120 131</td>
-            <td class="porc">7,11%</td>
-            <td class="abs">539 080</td>
-            <td class="total_porc">4,08%</td>
-
-        </tr>
-
-        <tr id="santa_catarina">
-            <td class="num">10</td>
-            <td class="estado">Santa Catarina</td>
-            <td class="ano_2024">8 058 441</td>
-            <td class="ano_2022">7 610 361</td>
-            <td class="porc">21,80%</td>
-            <td class="abs">1 361 925</td>
-            <td class="total_porc">3,79%</td>
-
-        </tr>
-
-        <tr id="goias">
-            <td class="num">11</td>
-            <td class="estado">Goiás</td>
-            <td class="ano_2024">7 350 483</td>
-            <td class="ano_2022">7 056 495</td>
-            <td class="porc">17,53%</td>
-            <td class="abs">1 052 707</td>
-            <td class="total_porc">3,46%</td>
-
-        </tr>
-
-        <tr id="maranhao">
-            <td class="num">12</td>
-            <td class="estado">Maranhão</td>
-            <td class="ano_2024">7 010 960</td>
-            <td class="ano_2022">6 776 699</td>
-            <td class="porc">3,07%</td>
-            <td class="abs">201 910</td>
-            <td class="total_porc">3,30%</td>
-
-        </tr>
-
-        <tr id="amazonas">
-            <td class="num">13</td>
-            <td class="estado">Amazonas</td>
-            <td class="ano_2024">4 281 209</td>
-            <td class="ano_2022">3 941 613</td>
-            <td class="porc">13,14%</td>
-            <td class="abs">457 628</td>
-            <td class="total_porc">2,01%</td>
-
-        </tr>
-
-        <tr id="paraiba">
-            <td class="num">14</td>
-            <td class="estado">Paraíba</td>
-            <td class="ano_2024">4 145 040</td>
-            <td class="ano_2022">3 974 687</td>
-            <td class="porc">5,53%</td>
-            <td class="abs">208 159</td>
-            <td class="total_porc">1,95%</td>
-
-        </tr>
-
-        <tr id="espirito_santo">
-            <td class="num">15</td>
-            <td class="estado">Espírito Santo</td>
-            <td class="ano_2024">4 102 129</td>
-            <td class="ano_2022">3 833 712</td>
-            <td class="porc">9,07%</td>
-            <td class="abs">318 760</td>
-            <td class="total_porc">1,93%</td>
-
-        </tr>
-        
-        <tr id="mato_grosso">
-            <td class="num">16</td>
-            <td class="estado">Mato Grosso</td>
-            <td class="ano_2024">3 836 399</td>
-            <td class="ano_2022">3 658 649</td>
-            <td class="porc">20,54%</td>
-            <td class="abs">623 527</td>
-            <td class="total_porc">1,80%</td>
-
-        </tr>
-
-        <tr id="rio_grande_do_norte">
-            <td class="num">17</td>
-            <td class="estado">Rio Grande do Norte</td>
-            <td class="ano_2024">3 446 071</td>
-            <td class="ano_2022">3 302 729</td>
-            <td class="porc">4,25%</td>
-            <td class="abs">134 702</td>
-            <td class="total_porc">1,62%</td>
-
-        </tr>
-
-        <tr id="piaui">
-            <td class="num">18</td>
-            <td class="estado">Piauí</td>
-            <td class="ano_2024">3 375 646</td>
-            <td class="ano_2022">3 271 199</td>
-            <td class="porc">4,90%</td>
-            <td class="abs">152 839</td>
-            <td class="total_porc">1,59%</td>
-
-        </tr>
-
-        <tr id="alagoas">
-            <td class="num">19</td>
-            <td class="estado">Alagoas</td>
-            <td class="ano_2024">3 220 104</td>
-            <td class="ano_2022">3 127 683</td>
-            <td class="porc">0,23%</td>
-            <td class="abs">7 189</td>
-            <td class="total_porc">1,51%</td>
-
-        </tr>
-
-        <tr id="distrito_federal">
-            <td class="num">20</td>
-            <td class="estado">Distrito Federal</td>
-            <td class="ano_2024">2 982 818</td>
-            <td class="ano_2022">2 817 381</td>
-            <td class="porc">9,62%</td>
-            <td class="abs">247 221</td>
-            <td class="total_porc">1,40%</td>
-
-        </tr>
-
-        <tr id="mato_grosso_do_sul">
-            <td class="num">21</td>
-            <td class="estado">Mato Grosso do Sul</td>
-            <td class="ano_2024">2 901 895</td>
-            <td class="ano_2022">2 757 013</td>
-            <td class="porc">12,58%</td>
-            <td class="abs">307 989</td>
-            <td class="total_porc">1,37%</td>
-
-        </tr>
-
-        <tr id="sergipe">
-            <td class="num">22</td>
-            <td class="estado">Sergipe</td>
-            <td class="ano_2024">2 291 077</td>
-            <td class="ano_2022">2 210 004</td>
-            <td class="porc">6,87%</td>
-            <td class="abs">141 987</td>
-            <td class="total_porc">1,08%</td>
-
-        </tr>
-
-        <tr id="rondonia">
-            <td class="num">23</td>
-            <td class="estado">Rondônia</td>
-            <td class="ano_2024">1 746 227</td>
-            <td class="ano_2022">1 581 196</td>
-            <td class="porc">1,20%</td>
-            <td class="abs">18 787</td>
-            <td class="total_porc">0,82%</td>
-
-        </tr>
-
-        <tr id="tocantins">
-            <td class="num">24</td>
-            <td class="estado">Tocantins</td>
-            <td class="ano_2024">1 577 342</td>
-            <td class="ano_2022">1 511 460</td>
-            <td class="porc">9,25%</td>
-            <td class="abs">128 015</td>
-            <td class="total_porc">0,74%</td>
-
-        </tr>
-
-        <tr id="acre">
-            <td class="num">25</td>
-            <td class="estado">Acre</td>
-            <td class="ano_2024">880 631</td>
-            <td class="ano_2022">830 018</td>
-            <td class="porc">13,15%</td>
-            <td class="abs">96 459</td>
-            <td class="total_porc">0,41%</td>
-
-        </tr>
-
-        <tr id="amapa">
-            <td class="num">26</td>
-            <td class="estado">Amapá</td>
-            <td class="ano_2024">802 837</td>
-            <td class="ano_2022">733 759</td>
-            <td class="porc">9,59%</td>
-            <td class="abs">64 233</td>
-            <td class="total_porc">0,38%</td>
-
-        </tr>
-
-        <tr id="roraima">
-            <td class="num">27</td>
-            <td class="estado">Roraima</td>
-            <td class="ano_2024">716 793</td>
-            <td class="ano_2022">636 707</td>
-            <td class="porc">41,34%</td>
-            <td class="abs">186 228</td>
-            <td class="total_porc">0,34%</td>
-
-        </tr>
-
-
+        </tbody>
         
 
-    </tbody>
+        <tfoot>
+            <tr>
+                <th>Total de habitantes</th>
+                <td class="numero"><strong>0000</strong></td>
 
-    <tfoot> <!-- Rodapé -->
-        <th></th>
-        <th>Total de habitantes</th>
-        <td class="ano_2024">212 583 750</td>
-        <td class="ano_2022">203 080 756</td>
-        <td class="porc">6,46%</td>
-        <td class="abs">12 324 957</td>
-        <td class="total_porc">100%</td>
+            </tr>
 
-    </tfoot>
+        </tfoot>
+    </table>
 </body>
+
 </html>
