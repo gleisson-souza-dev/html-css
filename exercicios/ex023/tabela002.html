@@ -15,12 +15,15 @@
             font-family: Arial, Helvetica, sans-serif;
             max-width: 800px;
             margin: 50px auto;
+            background-color: rgba(128, 128, 128, 0.372);
         }
 
 
         table{
             width: 100%;
             border-collapse: collapse;
+
+            position: relative;
 
         }
 
@@ -29,6 +32,16 @@
             color: white;
 
         }
+
+        thead {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+           
+        }
+
+
+
         th, td{
             border: 1px solid black;
             padding: 10px;
@@ -43,12 +56,12 @@
             text-transform:capitalize;
         }
 
-        tbody tr:nth-child(even) {
-            background-color: #f5f5f5;
+        tbody tr:nth-child(even) {/*par*/
+            background-color: #ffffff;
 
         }
 
-        tbody tr:nth-child(odd) {
+        tbody tr:nth-child(odd) {/*impar*/
             background-color: #fffaf0;
 
         }
@@ -57,7 +70,8 @@
             font-size: 1.5em;
             font-weight: bold;
             padding: 10px;
-            background-color: lightgray;
+      
+            text-transform: uppercase;
 
         }
 
@@ -67,11 +81,14 @@
             white-space: nowrap;
 
         }
+
+
         
     </style>
 </head>
+
 <body>
-    <h1>Uso de tabelas grandes</h1>
+
     <!--
         Anatomia para tabelas grandes
         TABLE
@@ -99,7 +116,7 @@
                 <th rowspan="2" scope="col">País Comparável<br>(habitantes)</th>
             </tr>
 
-            <tr>
+            <tr class="sub">
                 <th scope="col">2024 (est.)</th>
                 <th scope="col">2022</th>
                 <th scope="col">%</th>
