@@ -7,8 +7,6 @@
         {
             "type": "msedge",
             "request": "launch",
-            "name": "Open tabela002.html",
-            "file": "c:\\Users\\datas\\Documents\\estudos\\html-css\\exercicios\\ex023\\tabela002.html"
         }
     ]
 }
