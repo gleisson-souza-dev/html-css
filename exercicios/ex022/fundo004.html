@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Mascote Escape</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    background: radial-gradient(circle at center,#1a1a1a,#000);
+    font-family:Arial, sans-serif;
+    color:white;
+    cursor:crosshair;
+}
+
+#hud{
+    position:fixed;
+    top:20px;
+    left:20px;
+    z-index:100;
+}
+
+#hud h1{
+    font-size:18px;
+    font-weight:normal;
+}
+
+.entidade{
+    width:120px;
+    position:absolute;
+    pointer-events:auto;
+    transition:transform 0.1s linear;
+}
+</style>
+</head>
+<body>
+
+<div id="hud">
+    <h1>Nível: <span id="nivel">1</span></h1>
+    <h1>Pontos: <span id="pontos">0</span></h1>
+</div>
+
+<img src="https://gustavoguanabara.github.io/html-css/imagens/mascote.png"
+class="entidade" id="boneco">
+
+<script>
+
+const boneco = document.getElementById("boneco");
+const nivelEl = document.getElementById("nivel");
+const pontosEl = document.getElementById("pontos");
+
+let nivel = 1;
+let pontos = 0;
+let velocidade = 2;
+
+let posX = window.innerWidth/2;
+let posY = window.innerHeight/2;
+
+let mouseX = 0;
+let mouseY = 0;
+
+let tempoSemClique = 0;
+
+// Atualiza posição suave
+function atualizar(){
+
+    const dx = posX - mouseX;
+    const dy = posY - mouseY;
+    const distancia = Math.sqrt(dx*dx + dy*dy);
+
+    if(distancia < 300){
+
+        posX += (dx/distancia) * velocidade;
+        posY += (dy/distancia) * velocidade;
+    }
+
+    // Rebote real nas bordas
+    if(posX <= 0) posX = 10;
+    if(posY <= 0) posY = 10;
+    if(posX >= window.innerWidth-120) posX = window.innerWidth-130;
+    if(posY >= window.innerHeight-120) posY = window.innerHeight-130;
+
+    boneco.style.left = posX + "px";
+    boneco.style.top = posY + "px";
+
+    requestAnimationFrame(atualizar);
+}
+
+atualizar();
+
+document.addEventListener("mousemove",(e)=>{
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+});
+
+// Clique = captura
+boneco.addEventListener("click",()=>{
+
+    pontos++;
+    tempoSemClique = 0;
+
+    if(pontos % 5 === 0){
+        nivel++;
+        velocidade += 1.5;
+    }
+
+    nivelEl.textContent = nivel;
+    pontosEl.textContent = pontos;
+
+    // Teleporta ao ser capturado
+    posX = Math.random()*(window.innerWidth-120);
+    posY = Math.random()*(window.innerHeight-120);
+});
+
+// Sistema de derrota
+setInterval(()=>{
+    tempoSemClique++;
+
+    if(tempoSemClique > 15){
+        alert("Você perdeu! 😈");
+        nivel = 1;
+        pontos = 0;
+        velocidade = 2;
+        tempoSemClique = 0;
+        nivelEl.textContent = nivel;
+        pontosEl.textContent = pontos;
+    }
+
+},1000);
+
+</script>
+
+</body>
+</html>
