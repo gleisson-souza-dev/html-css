@@ -10,13 +10,13 @@ html, body{
     min-height: 100dvh;
     background-color: darkgray;
 
-
 }
 
 header{
     background-color: black;
     color: white;
     text-align: center;
+    
 
 }
 
@@ -59,19 +59,23 @@ section.normal{
 
 }
 
+section.normal > p{
+    padding-left: 20px;
+
+}
+
 section.imagem{
     background-color: rgb(51, 51, 51);
     color: white;
+    
 
 
 }
 
 section.imagem > p {
     background-color: rgba(0, 0, 0, 0.253);
-    max-width: 400px;
-
-    padding-left: 20px;
-
+    max-width: 300px;
+    padding: 10px 20px 10px 20px;
 
 }
 
@@ -79,6 +83,6 @@ footer{
     background-color: black;
     color: white;
     text-align: center;
-    padding: 10px 0px;
+    padding: 20px 0px;
 
 }
