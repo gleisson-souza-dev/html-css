@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+      {
+          "type": "chrome",
+          "request": "launch",
+          "name": "Abrir HTML no Edge",
+          "file": "${file}"
+      },
+
+      {
+        "type": "msedge",
+        "request": "launch",
+        "name": "Abrir no Edge",
+        "file": "${file}"
+    }
+  ]
+}

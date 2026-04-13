@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+
+    <style>
+        table{
+            width: 400px;
+            height: 150px;
+            border-collapse: collapse;
+        }
+
+        thead, tfoot{
+            color: white;
+            background-color: rgba(0, 0, 0, 0.482);
+        }
+        th{
+            padding: 10px 0px;
+            border: 1.5px solid rgba(0, 0, 0, 0.304);
+            vertical-align: middle;
+
+
+        }
+        td{
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+           
+
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    
+    <table>
+        <caption></caption>
+        <thead>
+            <tr>
+                <th>Posição</th>
+                <th>Unidade Federativa</th>
+                <th>População</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>01</td>
+                <td>São Paulo</td>
+                <td>45 919 049</td>
+
+            </tr>
+
+            <tr>
+                <td>02</td>
+                <td>Minas Gerais</td>
+                <td>21 168 791</td>
+
+            </tr>
+
+            <tr>
+                <td>03</td>
+                <td>Rio de Janeiro</td>
+                <td>17 168 791</td>
+
+            </tr>
+
+        </tbody>
+
+
+        <tfoot>
+                <tr>
+                    <th colspan="2">Total de Habitantes</th>
+                    <td><strong>0000</strong></td>
+                </tr>
+
+
+        </tfoot>
+    </table>
+
+</body>
+</html>
