@@ -18,7 +18,9 @@
         }
 
         caption{
+            font-size: 1.5em;
             padding: 10px 0px;
+            background-color: lightgray;
 
         }
 
@@ -76,6 +78,9 @@
             text-align: left;
 
         }
+        tbody tr:nth-child(even){
+            background-color: lightgray;
+        }
 
         tfoot td{
             font-size: 14px;
@@ -91,14 +96,14 @@
 
         <thead>
             <tr>
-                <th></th>
-                <th>Unidade Federativa</th>
-                <th>Estimativa populacional 2025</th>
-                <th>Estimativa populacional 2024</th>
-                <th class="num">Variação Absoluta</th>
-                <th class="varia">Variação Percentual</th>
-                <th>% do total de (2025) </th>
-                <th class="num">País comparável (Habitantes)</th>
+                <th scope="col"></th>
+                <th scope="col">Unidade Federativa</th>
+                <th scope="col">Estimativa populacional 2025</th>
+                <th scope="col">Estimativa populacional 2024</th>
+                <th scope="col" class="num">Variação Absoluta</th>
+                <th scope="col" class="varia">Variação Percentual</th>
+                <th scope="col">% do total de (2025) </th>
+                <th scope="col" class="num">País comparável (Habitantes)</th>
 
 
             </tr>
@@ -463,7 +468,7 @@
         <tfoot>
                 <tr>
                     <strong>
-                        <th colspan="2">Total de Habitantes</th>
+                        <th scope="row" colspan="2">Total de Habitantes</th>
                     </strong>
                     <td><strong>213 421 037</strong></td>
                     <td><strong>203 080 756</strong></td>
