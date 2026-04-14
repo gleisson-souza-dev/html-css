@@ -6,10 +6,20 @@
     <title>Tabelas</title>
 
     <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
         table{
             width: 400px;
             height: 150px;
             border-collapse: collapse;
+        }
+
+        caption{
+            padding: 10px 0px;
+
         }
 
         thead, tfoot{
@@ -17,10 +27,10 @@
             background-color: rgba(0, 0, 0, 0.482);
         }
         th{
-            padding: 10px 0px;
+            padding: 10px 10px;
             border: 1.5px solid rgba(0, 0, 0, 0.304);
             vertical-align: middle;
-
+            font-size: 14px;
 
         }
         td{
@@ -30,43 +40,420 @@
            
 
         }
+
+        .num{
+            padding: 10px 20px;
+
+        }
+
+
+        .perc{
+            color: #008000;
+            padding: 0px 0px;
+            
+        }
+
+        span{
+            color: #00CC33;
+            font-size: 20px;
+            
+
+        }
+
+        a{
+            color: #4675d8;
+            text-decoration: none;
+
+        }
+
+        .varia{
+            font-size: 12px;
+            padding: 0px 5px;
+            
+        }
+
+        .absol{
+            text-align: left;
+
+        }
+
+        tfoot td{
+            font-size: 14px;
+        }
     </style>
 
 </head>
 <body>
-    <h1>Uso de tabelas grandes</h1>
+    
     
     <table>
-        <caption></caption>
+        <caption><strong>Unidades Federativas do Brasil por população</strong></caption>
+
         <thead>
             <tr>
-                <th>Posição</th>
+                <th></th>
                 <th>Unidade Federativa</th>
-                <th>População</th>
+                <th>Estimativa populacional 2025</th>
+                <th>Estimativa populacional 2024</th>
+                <th class="num">Variação Absoluta</th>
+                <th class="varia">Variação Percentual</th>
+                <th>% do total de (2025) </th>
+                <th class="num">País comparável (Habitantes)</th>
+
 
             </tr>
 
         </thead>
 
         <tbody>
-            <tr>
+            <tr id="sao-paulo">
                 <td>01</td>
                 <td>São Paulo</td>
-                <td>45 919 049</td>
+                <td>46 081 801</td>
+                <td>45 973 194</td>
+                <td class="absol"><span>&#11014;</span>
+                    108 607</td>
+                <td class="perc">+0,24%</td>
+                <td>21,59%</td>
+                <td><a href="#">Argentina</a><br>(45 851 378)</td>
 
             </tr>
 
-            <tr>
+            <tr id="minas-gerais">
                 <td>02</td>
                 <td>Minas Gerais</td>
-                <td>21 168 791</td>
+                <td>21 393 441</td>
+                <td>21 322 691</td>
+                <td class="absol"><span>&#11014;</span>
+                    70 750</td>
+                <td class="perc">+0,33%</td>
+                <td>10,02%</td>
+                <td><a href="#">Chade</a><br>(21 003 705)</td>
+                
+            </tr>
+
+            <tr id="rio-de-janeiro">
+                <td>03</td>
+                <td>Rio de Janeiro</td>
+                <td>17 223 547</td>
+                <td>17 219 679</td>
+                <td class="absol"><span>&#11014;</span>
+                    3 868</td>
+                <td class="perc">+0,02%</td>
+                <td>8,07%</td>
+                <td><a href="#">Zimbabwe</a><br>(16 950 795)</td>
+                
+            </tr>
+
+            <tr id="bahia">
+                <td>04</td>
+                <td>Bahia</td>
+                <td>14 870 907</td>
+                <td>14 850 513</td>
+                <td class="absol"><span>&#11014;</span>
+                    20 394</td>
+                <td class="perc">+0,14%</td>
+                <td>6,97%</td>
+                <td><a href="#">Benim</a><br>(14 814 460)</td>
 
             </tr>
 
-            <tr>
-                <td>03</td>
-                <td>Rio de Janeiro</td>
-                <td>17 168 791</td>
+            <tr id="parana">
+                <td>05</td>
+                <td>Paraná</td>
+                <td>11 890 517</td>
+                <td>11 824 665</td>
+                <td class="absol"><span>&#11014;</span>
+                    65 852</td>
+                <td class="perc">+0,56%</td>
+                <td>5,57%</td>
+                <td><a href="#">Haiti</a><br>(11 906 095)</td>
+
+            </tr>
+
+            <tr id="rio-grande-do-sul">
+                <td>06</td>
+                <td>Rio Grande do Sul</td>
+                <td>11 233 263</td>
+                <td>11 229 915</td>
+                <td class="absol"><span>&#11014;</span>
+                    3 348</td>
+                <td class="perc">+0,03%</td>
+                <td>5,26%</td>
+                <td><a href="#">Emirados Àrabes Unidos</a><br>(11 346 000)</td>
+
+            </tr>
+
+            <tr id="pernambuco">
+                <td>07</td>
+                <td>Pernambuco</td>
+                <td>9 562 007</td>
+                <td>9 539 029</td>
+                <td class="absol"><span>&#11014;</span>
+                    22 978</td>
+                <td class="perc">+0,24%</td>
+                <td>4,48%</td>
+                <td><a href="#">Israel</a><br>(9 517 181)</td>
+
+            </tr>
+
+            <tr id="ceara">
+                <td>08</td>
+                <td>Ceará</td>
+                <td>9 268 836</td>
+                <td>9 233 656</td>
+                <td class="absol"><span>&#11014;</span>
+                    35 180</td>
+                <td class="perc">+0,38%</td>
+                <td>4,34%</td>
+                <td><a href="#">Áustria</a><br>(9 113 574)</td>
+
+            </tr>
+
+            <tr id="para">
+                <td>09</td>
+                <td>Pará</td>
+                <td>8 711 196</td>
+                <td>8 664 306</td>
+                <td class="absol"><span>&#11014;</span>
+                    46 890</td>
+                <td class="perc">+0,54%</td>
+                <td>4,08%</td>
+                <td><a href="#">Serra Leoa</a><br>(8 819 794)</td>
+
+            </tr>
+
+            <tr id="santa-catarina">
+                <td>10</td>
+                <td>Santa Catarina</td>
+                <td>8 187 029</td>
+                <td>8 058 441</td>
+                <td class="absol"><span>&#11014;</span>
+                    128 588</td>
+                <td class="perc">+1,60%</td>
+                <td>3,84%</td>
+                <td><a href="#">laos</a><br>(8 819 794)</td>
+
+            </tr>
+
+            <tr id="goias">
+                <td>11</td>
+                <td>Goiás</td>
+                <td>7 423 629</td>
+                <td>7 350 483</td>
+                <td class="absol"><span>&#11014;</span>
+                    73 146</td>
+                <td class="perc">+1,00%</td>
+                <td>3,48%</td>
+                <td><a href="#">Líbia</a><br>(7 458 555)</td>
+
+            </tr>
+
+            <tr id="maranhao">
+                <td>12</td>
+                <td>Maranhão</td>
+                <td>7 018 211</td>
+                <td>7 010 960</td>
+                <td class="absol"><span>&#11014;</span>
+                    7 251</td>
+                <td class="perc">+0,10%</td>
+                <td>3,29%</td>
+                <td><a href="#">Paraguai</a><br>(7 013 078)</td>
+                
+            </tr>
+
+            <tr id="amazonas">
+                <td>13</td>
+                <td>Amazonas</td>
+                <td>4 321 616</td>
+                <td>4 281 209</td>
+                <td class="absol"><span>&#11014;</span>
+                    40 407</td>
+                <td class="perc">+0,94%</td>
+                <td>2,02%</td>
+                <td><a href="#">Panamá</a><br>(4 571 189)</td>
+
+            </tr>
+
+            <tr id="paraiba">
+                <td>14</td>
+                <td>Paraíba</td>
+                <td>4 164 468</td>
+                <td>4 145 040</td>
+                <td class="absol"><span>&#11014;</span>
+                    19 428</td>
+                <td class="perc">+0,47%</td>
+                <td>1,95%</td>
+                <td><a href="#">Croácia</a><br>(3 848 169)</td>
+                
+            </tr>
+
+            <tr id="espirito-santo">
+                <td>15</td>
+                <td>Espírito Santo</td>
+                <td>4 126 854</td>
+                <td>4 102 129</td>
+                <td class="absol"><span>&#11014;</span>
+                    24 725</td>
+                <td class="perc">+0,60%</td>
+                <td>1,93%</td>
+                <td><a href="#">Croácia</a><br>(3 848 169)</td>
+
+            </tr>
+
+            <tr id="mato-grosso">
+                <td>16</td>
+                <td>Mato Grosso</td>
+                <td>3 893 659</td>
+                <td>3 836 399</td>
+                <td class="absol"><span>&#11014;</span>
+                    57 260</td>
+                <td class="perc">+1,49%</td>
+                <td>1,82%</td>
+                <td><a href="#">Croácia</a><br>(3 848 169)</td>
+
+            </tr>
+
+            <tr id="rio-grande-do-norte">
+                <td>17</td>
+                <td>Rio grande do Norte</td>
+                <td>3 455 236</td>
+                <td>3 446 071</td>
+                <td class="absol"><span>&#11014;</span>
+                    9 165</td>
+                <td class="perc">+0,27%</td>
+                <td>1,62%</td>
+                <td><a href="#">Mongólia</a><br>(3 517 100)</td>
+
+            </tr>
+
+            <tr id="piaui">
+                <td>18</td>
+                <td>Piauí</td>
+                <td>3 384 547</td>
+                <td>3 375 646</td>
+                <td class="absol"><span>&#11014;</span>
+                    8 901</td>
+                <td class="perc">+0,26%</td>
+                <td>1,59%</td>
+                <td><a href="#">Uruguai</a><br>(3 384 688)</td>
+
+            </tr>
+
+            <tr id="alagoas">
+                <td>19</td>
+                <td>Alagoas</td>
+                <td>3 220 848</td>
+                <td>3 220 104</td>
+                <td class="absol"><span>&#11014;</span>
+                    744</td>
+                <td class="perc">+0,02%</td>
+                <td>1,51%</td>
+                <td><a href="#">Bósnia e Herzegovina</a><br>(3 140 095)</td>
+
+            </tr>
+
+            <tr id="distrito-federal">
+                <td>20</td>
+                <td>Distrito Federal</td>
+                <td>2 996 899</td>
+                <td>2 982 818</td>
+                <td class="absol"><span>&#11014;</span>
+                    14 081</td>
+                <td class="perc">+0,47%</td>
+                <td>1,40%</td>
+                <td><a href="#">Moldávia</a><br>(2 996 106)</td>
+
+            </tr>
+
+            <tr id="mato-grosso-do-sul">
+                <td>21</td>
+                <td>Mato Grosso do Sul</td>
+                <td>2 924 631</td>
+                <td>2 901 895</td>
+                <td class="absol"><span>&#11014;</span>
+                    22 736</td>
+                <td class="perc">+0,78%</td>
+                <td>1,37%</td>
+                <td><a href="#">Armênia</a><br>(2 952 365)</td>
+
+            </tr>
+
+            <tr id="sergipe">
+                <td>22</td>
+                <td>Sergipe</td>
+                <td>2 299 425</td>
+                <td>2 291 077</td>
+                <td class="absol"><span>&#11014;</span>
+                    8 348</td>
+                <td class="perc">+0,36%</td>
+                <td>1,08%</td>
+                <td><a href="#">Guiné-Bissau</a><br>(2 249 515)</td>
+
+            </tr>
+
+            <tr id="rondonia">
+                <td>23</td>
+                <td>Rondônia</td>
+                <td>1 751 950</td>
+                <td>1 746 227</td>
+                <td class="absol"><span>&#11014;</span>
+                    5 723</td>
+                <td class="perc">+0,33%</td>
+                <td>0,82%</td>
+                <td><a href="#">Macedônia</a><br>(1 813 791)</td>
+
+            </tr>
+
+            <tr id="tocantins">
+                <td>24</td>
+                <td>Tocantins</td>
+                <td>1 586 859</td>
+                <td>1 577 342</td>
+                <td class="absol"><span>&#11014;</span>
+                 9 517</td>
+                <td class="perc">+0,60%</td>
+                <td>0,74%</td>
+                <td><a href="#">Barém</a><br>(1 643 332)</td>
+
+            </tr>
+
+            <tr id="acre">
+                <td>25</td>
+                <td>Acre</td>
+                <td>884 372</td>
+                <td>880 613</td>
+                <td class="absol"><span>&#11014;</span>
+                 3 741</td>
+                <td class="perc">+0,42%</td>
+                <td>0,41%</td>
+                <td><a href="#">Comores</a><br>(882 847)</td>
+
+            </tr>
+
+            <tr id="amapa">
+                <td>26</td>
+                <td>Amapá</td>
+                <td>806 517</td>
+                <td>802 837</td>
+                <td class="absol"><span>&#11014;</span>
+                 3 680</td>
+                <td class="perc">+0,46%</td>
+                <td>0,38%</td>
+                <td><a href="#">Butão</a><br>(796 682)</td>
+
+            </tr>
+
+            <tr id="roraima">
+                <td>27</td>
+                <td>Roraima</td>
+                <td>738 772</td>
+                <td>716 793</td>
+                <td class="absol"><span>&#11014;</span>
+                 21 979</td>
+                <td class="perc">+3,07%</td>
+                <td>0,35%</td>
+                <td><a href="#">Butão</a><br>(796 682)</td>
 
             </tr>
 
@@ -75,8 +462,15 @@
 
         <tfoot>
                 <tr>
-                    <th colspan="2">Total de Habitantes</th>
-                    <td><strong>0000</strong></td>
+                    <strong>
+                        <th colspan="2">Total de Habitantes</th>
+                    </strong>
+                    <td><strong>213 421 037</strong></td>
+                    <td><strong>203 080 756</strong></td>
+                    <td><strong>12 324 957</strong></td>
+                    <td><strong>6,46%</strong></td>
+                    <td><strong>100%</strong></td>
+                    <td><strong>-</strong></td>
                 </tr>
 
 
