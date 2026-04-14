@@ -15,6 +15,8 @@
             width: 400px;
             height: 150px;
             border-collapse: collapse;
+            position: relative;
+
         }
 
         caption{
@@ -26,7 +28,7 @@
 
         thead, tfoot{
             color: white;
-            background-color: rgba(0, 0, 0, 0.482);
+            background-color: #383838;
         }
         th{
             padding: 10px 10px;
@@ -78,6 +80,13 @@
             text-align: left;
 
         }
+        thead > tr > th{
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
+
+        }
+
         tbody tr:nth-child(even){
             background-color: lightgray;
         }
@@ -89,7 +98,6 @@
 
 </head>
 <body>
-    
     
     <table>
         <caption><strong>Unidades Federativas do Brasil por população</strong></caption>
@@ -481,6 +489,7 @@
 
         </tfoot>
     </table>
+    
 
 </body>
 </html>
